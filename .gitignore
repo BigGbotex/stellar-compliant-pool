@@ -1,0 +1,12 @@
+node_modules/
+.next/
+target/
+Cargo.lock
+*.log
+.DS_Store
+
+# Noir's WASM compiler caches fetched git dependencies next to the project
+# when pointed at a real path (as our scripts/frontend do) instead of nargo's
+# usual global cache - ignore that here.
+circuits/*/archives/
+circuits/*/libs/

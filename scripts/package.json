@@ -1,0 +1,14 @@
+{
+  "name": "compliant-pool-scripts",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Off-chain helpers: build the pool/ASP Merkle trees and produce witness inputs for the withdraw circuit. Hashing is delegated to the real compiled Noir circuit (via @noir-lang/noir_wasm + noir_js) rather than re-implemented in JS, so the off-chain tree is always consistent with what the circuit and on-chain Poseidon2 host function compute.",
+  "scripts": {
+    "generate-note": "node generate-note.mjs",
+    "build-witness": "node build-withdraw-witness.mjs"
+  },
+  "dependencies": {
+    "@noir-lang/noir_js": "1.0.0-beta.9",
+    "@noir-lang/noir_wasm": "1.0.0-beta.9"
+  }
+}
